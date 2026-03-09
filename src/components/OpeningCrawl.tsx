@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import {base_url} from "../utils/constants.ts";
+import Text from "./Text.tsx";
 
 const OpeningCrawl = () => {
     const [openingCrawl, setOpeningCrawl] =
@@ -19,7 +20,9 @@ const OpeningCrawl = () => {
     }, [openingCrawl])
 
     return (
-        <p className="text-3xl text-justify leading-normal tracking-widest">{openingCrawl}</p>
+        <Text>
+            {openingCrawl}
+        </Text>
     )
 
 }
