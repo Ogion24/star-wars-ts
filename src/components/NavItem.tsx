@@ -1,16 +1,19 @@
-import {SWContext} from "../utils/context.ts";
-import {useContext} from "react";
+
 import Button from "./Button.tsx";
+import {NavLink} from "react-router";
 
 
 
 const NavItem = ({itemTitle}:{itemTitle: string}) => {
-    const {changePage} = useContext(SWContext);
+
     return (
-        <Button onClick={() => {changePage(itemTitle)}}>
-            {itemTitle}
-        </Button>
+
+        <NavLink  to={`/${itemTitle.toLowerCase()}`}>
+            <Button >{itemTitle} </Button>
+        </NavLink>
     )
 }
-
+            // <a href={`/${itemTitle}`}>
+            // <Button >{itemTitle} </Button>
+            // </a>
 export default NavItem;
