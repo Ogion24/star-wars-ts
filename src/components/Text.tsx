@@ -1,13 +1,9 @@
-import type {ReactNode} from "react";
-
-type TextProps = {
-    children: ReactNode;
-}
-const Text = ({children}: TextProps) => {
+const Text = ({children}: { children: string }) => {
     return (
-        <p className="text-3xl text-justify tracking-widest leading-normal">
+        <p className="text-3xl text-justify leading-normal tracking-widest">
             {children}
         </p>
     )
 }
+
 export default Text;

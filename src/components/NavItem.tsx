@@ -1,19 +1,16 @@
-
 import Button from "./Button.tsx";
 import {NavLink} from "react-router";
+import {useContext} from "react";
+import {SWContext} from "../utils/context.ts";
 
-
-
-const NavItem = ({itemTitle}:{itemTitle: string}) => {
+const NavItem = ({itemTitle}: { itemTitle: string }) => {
+    const {hero} = useContext(SWContext);
 
     return (
-
-        <NavLink  to={`/${itemTitle.toLowerCase()}`}>
-            <Button >{itemTitle} </Button>
+        <NavLink to={`/${itemTitle.toLowerCase()}/${hero}`}> //...можно и гиперссылкой
+            <Button>{itemTitle}</Button>
         </NavLink>
     )
 }
-            // <a href={`/${itemTitle}`}>
-            // <Button >{itemTitle} </Button>
-            // </a>
+
 export default NavItem;
