@@ -10,7 +10,7 @@ function App() {
 
     return (
         <div className={'mx-2'}>
-            <SWContext value={{hero, changeHero: setHero}}>//hero:hero
+            <SWContext value={{hero, changeHero: setHero}}>
                 <Header/>
                 <Main/>
                 <Footer/>

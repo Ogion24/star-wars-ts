@@ -7,7 +7,7 @@ const NavItem = ({itemTitle}: { itemTitle: string }) => {
     const {hero} = useContext(SWContext);
 
     return (
-        <NavLink to={`/${itemTitle.toLowerCase()}/${hero}`}> //...можно и гиперссылкой
+        <NavLink to={`/${itemTitle.toLowerCase()}/${hero}`}>
             <Button>{itemTitle}</Button>
         </NavLink>
     )
