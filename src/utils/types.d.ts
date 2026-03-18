@@ -4,7 +4,7 @@ export interface SWContextValue {
 }
 
 export interface Hero {
-    name: string;
+    name: string ;
     img: string;
     url: string;
 }
